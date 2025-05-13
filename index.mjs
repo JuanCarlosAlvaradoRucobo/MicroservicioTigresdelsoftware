@@ -13,11 +13,9 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.log('Error al conectar MongoDB:', err));
 
 app.use(express.json());
-// Usa todas las rutas desde /api/
 
 app.use('/api', apiRoutes);
 
-// Servidor
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor escuchando en http://localhost:${PORT}`);
+  console.log(`Servidor escuchado en http://localhost:${PORT}`);
 });

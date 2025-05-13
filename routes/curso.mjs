@@ -4,7 +4,7 @@ import { generarReportedeEvaluaciones } from '../services/generarReportedeEvalua
 
 const router = express.Router();
 
-router.get('/reporte', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const curso = generarCurso('id-prueba');
     const reporte = await generarReportedeEvaluaciones(curso);
